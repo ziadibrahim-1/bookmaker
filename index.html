@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarke</title>
+    <link rel="icon" href="image.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container py-5 mt-3">
+      <div class="d-flex justify-content-center position-relative">
+        <h1 class="text-center mb-5 py-2 position-relative">Bookmarker</h1>
+        <span class="Border position-absolute"></span>
+      </div>
+      <h2 class="text-center mb-4">
+        <i class="fa-solid fa-bookmark" style="color: #65e67b"></i>Bookmark your
+        favorite sites
+        <i class="fa-solid fa-bookmark" style="color: #b1ac4a"></i>
+      </h2>
+      <div class="mb-4">
+        <label for="bookmark" class="form-label"
+          ><i class="fa-solid fa-book"></i> Site Name</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="bookmark"
+          placeholder="Bookmark Name"
+          onkeyup="validationCheck()"
+        />
+        <p id="errorSite" class="alert alert-danger py-2 d-none">
+          Site Name must be at least 3 letters
+        </p>
+      </div>
+      <div class="mb-4">
+        <label for="website" class="form-label"
+          ><i class="fa-solid fa-book"></i> site URL</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="website"
+          placeholder="http://www.example.com"
+          onkeyup="validationCheck2()"
+        />
+        <p id="errorURL" class="alert alert-danger py-2 d-none">
+          Your URL is not-valid
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center position-relative mb-5">
+        <button class="btn btn-danger px-5" id="SubmitBtn" onclick="addUrl()">
+          Submit
+        </button>
+        <span class="Border2 position-absolute"></span>
+      </div>
+
+      <table class="text-center bg-white table">
+        <thead>
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tablecontent"></tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
